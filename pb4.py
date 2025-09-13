@@ -182,7 +182,7 @@ class ElementEditor:
                     df.at[index, 'content'] = new_content
                     DataManager.save_data(df, 'prompt_elements.csv')
                     st.success("Updated successfully!")
-                    st.experimental_rerun()
+                    st.rerun()
             with col2:
                 if st.button("Delete", key=f"delete_{index}"):
                     df = df.drop(index)
